@@ -1,0 +1,121 @@
+body {
+  background-color: #002554;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.insert {
+  text-align: right;
+  font-size: 28px;
+  color: white;
+  margin-top: 40px;
+}
+
+.media {
+  color: red;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.format-text {
+  background-color: black;
+  padding: 20px;
+  margin-top: 30px;
+  border-left: 1px solid red;
+  border-top: 1px solid red;
+}
+
+.format-text h2 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+.format-text p {
+  font-size: 16px;
+}
+
+.controls {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.controls h2 {
+  font-size: 24px;
+  color: green;
+}
+
+.galleries {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.galleries h2 {
+  font-size: 24px;
+  color: yellow;
+  border-bottom: 2px solid yellow;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.highlight-yellow {
+  background-color: yellow;
+  color: black;
+  padding: 0 5px;
+}
+
+.highlight-orange {
+  background-color: orange;
+  color: black;
+  padding: 0 5px;
+}
+
+.highlight-red {
+  background-color: red;
+  color: white;
+  padding: 0 5px;
+}
+
+.highlight-blue {
+  background-color: lightblue;
+  color: black;
+  padding: 0 5px;
+}
+
+.highlight-green {
+  background-color: lime;
+  color: black;
+  padding: 0 5px;
+}
+
+.red { color: red; }
+.pink { color: pink; }
+.blue { color: blue; }
+.green { color: green; }
+.yellow { color: yellow; }
+.orange { color: orange; }
