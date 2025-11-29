@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Siaton | Negros Oriental Tourism</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        padding-top: 56px;
+        background-color: #e9ecef; /* Added background color */
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #212529 !important;
+    }
+
+    #home {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images1/siaton.jpg) center/cover no-repeat;
+        background-attachment: fixed;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 0;
+    }
+
+    .carousel-img {
+        max-height: 65vh;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .img-effect {
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .img-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .developer-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #007bff;
+    }
+
+    .text-section-content p,
+    .text-section-content .card-text,
+    .text-section-content h5,
+    .text-section-content .list-group-item,
+    .text-section-content label {
+        color: #343a40 !important;
+    }
+
+    .card-title,
+    .card-title.text-primary {
+        color: #007bff !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: white !important;
+        transition: color 0.3s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: #d4d4d4 !important;
+    }
+
+    .carousel-caption {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .carousel-caption h5,
+    .carousel-caption p {
+        color: white !important;
+    }
+
+    /* Additional styles for cards hover effects */
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Styles for specific sections (like accommodations) */
+    .fiesta-card .card-img-top {
+        width: 100%;
+        height: 200px; /* change height to taste */
+        object-fit: cover; /* crop to fill */
+    }
+    .fiesta-card { border: none; }
+    .section-title { margin-bottom: 0.5rem; }
+    .lead { margin-bottom: 1.25rem; }
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main Siaton Navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="images1/584385384_2240815326423684_7753036022988412837_n.jpg"
+                    alt="Official Seal of Siaton Municipality" class="rounded-circle"
+                    style="width:40px; height:40px; margin-right:10px;" />
+                Siaton
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#attractions">Attractions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#food">Food & Accommodations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#officials">Officials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#developers">Developers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">Discover the Beauty of Siaton</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp">Your gateway to the pristine beaches and lush
+                landscapes of Negros Oriental</p>
+            <a href="#attractions" class="btn btn-primary btn-lg shadow-lg animate__animated animate__zoomIn">Explore
+                Attractions</a>
+        </div>
+    </header>
+
+    ---
+
+    <section id="about" class="py-5 text-section-content">
+        <div class="container">
+            <h2 class="section-title text-center">About the Municipality</h2>
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <img src="images1/403416152_1081941776279306_4453979962720887499_n.jpg"
+                        class="img-fluid rounded img-effect w-100"
+                        alt="Siaton Municipal Hall, a prominent town landmark.">
+                </div>
+                <div class="col-md-7 mt-4 mt-md-0">
+                    <p class="fs-5">Siaton is a bustling coastal municipality situated in the southern part of Negros
+                        Oriental, Philippines. It holds the distinction of being the province's southernmost town.</p>
+                    <p>Known for its rich history and strategic location, Siaton serves as a prime eco-tourism
+                        destination. Travelers are drawn to its contrasting landscapes, from the clear waters of its
+                        hidden bays to the verdant peaks of its mountains. We are proud of our warm community and
+                        vibrant local culture, making it a perfect spot for authentic Filipino exploration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="attractions" class="py-5 bg-light text-section-content">
+        <div class="container">
+            <h2 class="section-title text-center">Featured Attractions</h2>
+            <p class="lead text-center mb-5">Swipe to explore the natural and cultural wonders awaiting you in Siaton.
+            </p>
+
+            <div id="siatonCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
+                data-bs-pause="hover">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#siatonCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#siatonCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#siatonCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#siatonCarousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+
+
+                </div>
+
+                <div class="carousel-inner rounded-3 shadow-lg">
+
+                    <div class="carousel-item active">
+                        <img src="images1/beach.jpg" class="d-block w-100 carousel-img"
+                            alt="Pristine white sand beach in Siaton with clear blue water." />
+                        <div class="carousel-caption d-block bg-dark bg-opacity-75 rounded-top p-2">
+                            <h5>Little siargao</h5>
+                            <p class="mb-1">Little Siargao" in Siaton, Negros Oriental is the Nagba Seawall in Brgy.
+                                Maloh, a scenic spot known for its sunset views and tranquil atmosphere.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images1/panaon.jpg" class="d-block w-100 carousel-img"
+                            alt="Lush green mountains and forest covering the Siaton landscape." />
+                        <div class="carousel-caption d-block bg-dark bg-opacity-75 rounded-top p-2">
+                            <h5>Panaon Siaton</h5>
+                            <p class="mb-1">Popular scenic spot known for its stunning coastal and ocean views.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="carousel-item">
+                        <img src="images1/tambobo.jpg" class="d-block w-100 carousel-img"
+                            alt="Boats anchored peacefully in Tambobo Bay, Siaton." />
+                        <div class="carousel-caption d-block bg-dark bg-opacity-75 rounded-top p-2">
+                            <h5>Tambobo Bay</h5>
+                            <p class="mb-1">A serene, sheltered bay perfect for sailing and peaceful swimming. Known for
+                                its calm waters and picturesque coastline.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images1/church.jpg" class="d-block w-100 carousel-img"
+                            alt="Siaton Parish Church, a historical religious structure." />
+                        <div class="carousel-caption d-block bg-dark bg-opacity-75 rounded-top p-2">
+                            <h5>Siaton Parish Church</h5>
+                            <p class="mb-1">A historical landmark that serves as the center of religious and community
+                                life in the town proper.</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="food" class="py-5 text-section-content">
+        <div class="container">
+            <h2 class="section-title text-center">Local Food Specialties</h2>
+
+            <!-- Food 1 -->
+            <div class="row align-items-center mt-4">
+                <div class="col-md-5">
+                    <img src="images1/tinolang isda.jpg" class="img-fluid rounded img-effect w-100"
+                        alt="Budbud and hot chocolate">
+                </div>
+                <div class="col-md-7 mt-4 mt-md-0">
+                    <h3 class="fw-bold">Tinolang Isda</h3>
+                    <p class="fs-5">
+                        Fish soup and is a popular breakfast favorite, especially in coastal areas like Siaton where
+                        fresh fish is readily available from local fishermen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Food 2 -->
+            <div class="row align-items-center mt-5">
+                <div class="col-md-7 order-md-1 order-2 mt-4 mt-md-0">
+                    <h3 class="fw-bold">Kinilaw (Ceviche)</h3>
+                    <p class="fs-5">
+                        Fresh seafood cured in vinegar, ginger, onions, and local spices.
+                        Known for its refreshing and vibrant flavor—perfect for coastal dining.
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-2 order-1">
+                    <img src="images1/kinilaw.jpg" class="img-fluid rounded img-effect w-100"
+                        alt="Kinilaw dish from Siaton">
+                </div>
+            </div>
+
+            <!-- Food 3 -->
+            <div class="row align-items-center mt-5">
+                <div class="col-md-5">
+                    <img src="images1/sinugba lagi ni.jpg" class="img-fluid rounded img-effect w-100"
+                        alt="Grilled seafood platter">
+                </div>
+                <div class="col-md-7 mt-4 mt-md-0">
+                    <h3 class="fw-bold">Sinugba</h3>
+                    <p class="fs-5">
+                        Thanks to its coastal location, Siaton offers an abundance of freshly caught
+                        fish, squid, and shellfish—often served grilled and paired with native sauces.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <section id="accommodations" class="py-5 text-section-content">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Accommodations</h2>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images1/antulang.png" class="card-img-top" alt="Beachfront resort in Siaton">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Antulang Beach Resort</h5>
+                            <p class="card-text">
+                                A relaxing beachfront escape offering cozy rooms, ocean views,
+                                and easy access to nearby attractions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images1/grandview.png" class="card-img-top" alt="Mountain lodge">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Grand View Cottages Resort</h5>
+                            <p class="card-text">
+                                An eco-friendly resort in Siaton, known for its tranquil, nature-focused environment
+                                with stunning ocean and mountain views.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images1/kookon.jpg" class="card-img-top" alt="Modern inn accommodation">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Kookoo's Nest</h5>
+                            <p class="card-text">
+                                Kookoo’s nest Eco-lodge, which is comprised of nine beautiful, rustic bamboo beach
+                                cottages and rooms, with a central restaurant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images1/monkey1.jpg" class="card-img-top" alt="Nature eco-lodge">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sevens Hideaway Beach Resort</h5>
+                            <p class="card-text">
+                                sevens hideaway beach resort where every view is a breath of calm, and every moment
+                                feels like pure peace.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <style>
+    /* Small local styles to keep card images consistent */
+    .fiesta-card .card-img-top {
+      width: 100%;
+      height: 200px; /* change height to taste */
+      object-fit: cover; /* crop to fill */
+    }
+    .fiesta-card { border: none; }
+    .section-title { margin-bottom: 0.5rem; }
+    .lead { margin-bottom: 1.25rem; }
+  </style>
+
+  <section id="events" class="py-5 bg-light text-section-content">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Fiestas & Major Events</h2>
+        <p class="lead text-center mb-5">Experience the vibrant culture and community spirit of Siaton through its annual celebrations.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1: Inagta Festival -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fiesta-card h-100 text-center">
+            <!-- Put the path to your image in the src attribute. Example: images/fiesta1.jpg or /mnt/data/1764343441730.jpg -->
+            <img src="images1/inagta.jpg" alt="Inagta Festival" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title text-black fw-bold">Inagta Festival</h4>
+              <p class="card-text text-muted mb-1"><strong>Date:</strong> December 5</p>
+              <p class="card-text text-start">A vibrant cultural and culinary celebration showcasing Inagta Festival, a cultural and religious celebration unique to the municipality of Siaton, Negros Oriental, Philippines. It honors the town's patron saint and celebrates local history and indigenous heritage.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Siaton Town Fiesta -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fiesta-card h-100 text-center">
+            <!-- Example second image; replace with your file -->
+            <img src="images1/festival.jpg" alt="Siaton Town Fiesta" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title text-black fw-bold">Siaton Town Fiesta</h4>
+              <p class="card-text text-muted mb-1"><strong>Date:</strong> December 8</p>
+              <p class="card-text text-start">Siaton Town Fiesta is a lively event featuring parades, food stalls and religious activities.</p>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </section>
+
+
+
+    <section id="officials" class="py-5 text-section-content">
+        <div class="container">
+            <h2 class="section-title text-center">Local Government Officials</h2>
+            <div class="text-center mb-4">
+            <img src="images1/main.png" 
+                 alt="Siaton Officials Group Photo" 
+                 class="img-fluid rounded shadow-sm" 
+                 style="max-width: 100%; height: auto;">
+        </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center mb-4 text-muted">The following officials are currently serving the
+                        Municipality of Siaton, dedicated to the growth and prosperity of Negros Oriental:</p>
+                    <ul class="list-group list-group-flush shadow-sm rounded-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-light p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/mayor1.png" alt="Mayor Photo" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <strong class="text-primary">Municipal Mayor</strong>
+                            </div>
+                            <span class="fw-bold">Alberto G. Ator</span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/vicemayor.png" alt="Vice Mayor Photo" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <strong class="text-primary">Municipal Vice Mayor</strong>
+                            </div>
+                            <span class="fw-bold">Jocelyn Arbolado-Kitane</span>
+                        </li>
+                        
+                        <li class="list-group-item text-center fw-bold"
+                        style="background-color: black; color: #fff !important;">
+                            Siaton Councilors
+                        </li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/bingbing.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">Bingbing Arbolado</span>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/william.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">William Kirit</span>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/emy.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">Emy Gadingan</span>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/nestle.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">Nestle Villacampa</span>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/marlon.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">Marlon Master Ator</span>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/matoy.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">Matoy Ragay</span>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/gabo.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">Rowel Gabo</span>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="images1/macahig.png" alt="" class="rounded-circle"
+                                    style="width:60px; height:60px; object-fit:cover;">
+                                <span class="fw-bold">Steve Macahig</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="py-5 bg-light text-section-content">
+        <div class="container">
+            <h2 class="section-title text-center">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-center lead mb-4 text-muted">Have questions about Siaton, need travel assistance, or
+                        want to partner with us? Send us a message.</p>
+                    <form class="row g-3 p-4 border rounded-3 shadow-lg bg-white">
+                        <div class="col-md-6">
+                            <label for="contactName" class="form-label fw-bold">Your Name</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Enter Your Name"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="contactEmail" class="form-label fw-bold">Your Email</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="@gmail.com"
+                                required>
+                        </div>
+
+                        <style>
+                            /* Remove the dropdown arrow */
+                            #dropdownButton::after {
+                                display: none;
+                            }
+                        </style>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownButton"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                Tourist Spot You want To go
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" id="dropdownMenu">
+                                <li><button class="dropdown-item" type="button">Antulang Beach Resort</button></li>
+                                <li><button class="dropdown-item" type="button">Grand View Cottages Resort</button></li>
+                                <li><button class="dropdown-item" type="button">Kookoo's Nest</button></li>
+                                <li><button class="dropdown-item" type="button">Sevens Hideaway Beach Resort</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <script>
+                            document.querySelectorAll('.dropdown-item').forEach(item => {
+                                item.addEventListener('click', function () {
+                                    const selectedText = this.textContent;
+                                    document.getElementById('dropdownButton').textContent = selectedText;
+                                });
+                            });
+                        </script>
+                        <div class="col-12">
+                            <label for="contactMessage" class="form-label fw-bold">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="5"
+                                placeholder="Write your detailed message here..." required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-75 mt-3 shadow">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="developers" class="py-5 text-center text-section-content">
+        <div class="container">
+            <h2 class="section-title text-center">The Developers</h2>
+            <p class="lead text-muted mb-5">This website was developed as an academic project showcasing the use of the
+                Bootstrap framework.</p>
+
+            <div class="row justify-content-center g-4">
+                <h2>Member</h2>
+                <div class="col-md-4 col-sm-6">
+
+                    <img src="images1/2.png" class="developer-img img-effect" alt=""
+                        loading="lazy">
+                    <h5 class="mt-3 fw-bold">Aljosh Susas</h5>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <img src="images1/1.png" class="developer-img img-effect" alt=""
+                        loading="lazy">
+                    <h5 class="mt-3 fw-bold">Rhea Jane Gravador</h5>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <img src="images1/5.png" class="developer-img img-effect" alt=""
+                        loading="lazy">
+                    <h5 class="mt-3 fw-bold">Kate Ardonia Macabinguil</h5>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="images1/4.png" class="developer-img img-effect" alt=""
+                        loading="lazy">
+                    <h5 class="mt-3 fw-bold">Hanna Bendanillo</h5>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="images1/3.png" class="developer-img img-effect" alt=""
+                        loading="lazy">
+                    <h5 class="mt-3 fw-bold">Sean Michael Palaran</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Siaton Tourism Website | All Rights Reserved. | <a href="#home"
+                    class="text-white text-decoration-none">Back to Top</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
