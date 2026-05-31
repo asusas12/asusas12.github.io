@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Baptist Church – Outro</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;700&family=Dancing+Script:wght@700&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a1628;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    font-family: 'Cinzel', serif;
+    position: relative;
+  }
+
+  /* ── Radial background glow ── */
+  .bg-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 50%, rgba(34,139,34,.18) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,165,0,.07) 0%, transparent 80%),
+      #0a1628;
+  }
+
+  /* ── Particle stars ── */
+  .stars { position: absolute; inset: 0; overflow: hidden; }
+  .star {
+    position: absolute; border-radius: 50%;
+    background: #fff; opacity: 0;
+    animation: twinkle var(--d) var(--delay) ease-in-out infinite;
+  }
+  @keyframes twinkle {
+    0%,100% { opacity: 0; transform: scale(.5); }
+    50%      { opacity: var(--op); transform: scale(1.2); }
+  }
+
+  /* ── Light rays ── */
+  .rays { position: absolute; inset: 0; pointer-events: none; }
+  .ray {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 2px; height: 380px;
+    background: linear-gradient(to top, transparent, rgba(100,220,100,.18), transparent);
+    transform-origin: bottom center;
+    opacity: 0;
+    animation: rayRotate 6s linear infinite, rayFade 3s ease-in-out infinite;
+  }
+  @keyframes rayRotate { from { transform: rotate(var(--start)); } to { transform: rotate(calc(var(--start) + 360deg)); } }
+  @keyframes rayFade { 0%,100%{opacity:0} 40%,60%{opacity:1} }
+
+  /* ── Logo circle ── */
+  .logo-wrap {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: logoIn 1s cubic-bezier(.34,1.56,.64,1) 0.5s forwards;
+  }
+  @keyframes logoIn {
+    to { transform: translate(-50%, -50%) scale(1); }
+  }
+
+  .logo-ring {
+    width: 230px; height: 230px;
+    border-radius: 50%;
+    border: 4px solid rgba(100,220,100,.6);
+    box-shadow:
+      0 0 30px rgba(100,220,100,.4),
+      0 0 70px rgba(100,220,100,.15),
+      inset 0 0 30px rgba(100,220,100,.08);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    animation: ringPulse 3s ease-in-out 1.5s infinite;
+  }
+  @keyframes ringPulse {
+    0%,100% { box-shadow: 0 0 30px rgba(100,220,100,.4), 0 0 70px rgba(100,220,100,.15), inset 0 0 30px rgba(100,220,100,.08); }
+    50%      { box-shadow: 0 0 50px rgba(100,220,100,.7), 0 0 100px rgba(100,220,100,.25), inset 0 0 50px rgba(100,220,100,.15); }
+  }
+
+  .logo-ring img {
+    width: 210px; height: 210px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  /* ── Orbiting cross ── */
+  .orbit {
+    position: absolute; top: 50%; left: 50%;
+    width: 280px; height: 280px;
+    margin: -140px 0 0 -140px;
+    animation: orbitSpin 8s linear 1.5s infinite;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  @keyframes orbitSpin {
+    0%   { transform: rotate(0deg);    opacity: 0; }
+    5%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 1; }
+  }
+  .orbit-dot {
+    position: absolute; top: 0; left: 50%;
+    width: 12px; height: 12px;
+    background: #ffa500;
+    border-radius: 50%;
+    margin-left: -6px; margin-top: -6px;
+    box-shadow: 0 0 12px #ffa500, 0 0 24px rgba(255,165,0,.5);
+  }
+
+  /* ── Text block ── */
+  .text-block {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    text-align: center;
+    padding-bottom: 48px;
+  }
+
+  .church-name {
+    font-family: 'Cinzel', serif;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #fff;
+    line-height: 1.1;
+    text-shadow: 0 0 30px rgba(100,220,100,.6), 0 2px 8px rgba(0,0,0,.8);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.9s cubic-bezier(.22,1,.36,1) 1.2s forwards;
+  }
+
+  .subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    color: rgba(255,200,80,.9);
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 20px rgba(255,165,0,.5);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.9s cubic-bezier(.22,1,.36,1) 1.5s forwards;
+  }
+
+  .location {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    color: rgba(180,220,180,.75);
+    letter-spacing: 0.15em;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: slideUp 0.9s cubic-bezier(.22,1,.36,1) 1.8s forwards;
+  }
+
+  .verse {
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    color: rgba(255,255,255,.55);
+    margin-top: 14px;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    animation: fadeIn 1s ease 2.1s forwards;
+  }
+
+  @keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* ── Divider line ── */
+  .divider {
+    width: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(100,220,100,.7), rgba(255,165,0,.7), transparent);
+    margin: 12px auto 0;
+    opacity: 0;
+    animation: lineGrow 1s ease 1.9s forwards;
+  }
+  @keyframes lineGrow {
+    to { width: 420px; opacity: 1; }
+  }
+
+  /* ── Top tagline ── */
+  .tagline {
+    position: absolute;
+    top: 38px; left: 0; right: 0;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    color: rgba(100,220,100,.8);
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 20px rgba(100,220,100,.4);
+    opacity: 0;
+    animation: fadeIn 1.2s ease 2.4s forwards;
+  }
+
+  /* ── Fade-out at end ── */
+  .scene {
+    position: absolute; inset: 0;
+    animation: sceneFadeOut 1s ease 7s forwards;
+  }
+  @keyframes sceneFadeOut {
+    to { opacity: 0; }
+  }
+
+  /* ── Vignette ── */
+  .vignette {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.7) 100%);
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="scene">
+  <div class="bg-glow"></div>
+
+  <!-- Stars -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Light rays -->
+  <div class="rays" id="rays"></div>
+
+  <!-- Orbit ring -->
+  <div class="orbit">
+    <div class="orbit-dot"></div>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <div class="logo-ring">
+      <img src="/a07dc1aa-026d-4007-979a-bf0df2e8714e.jpg" alt="First Baptist Church logo emblem centered within a glowing green circular border on a dark starlit background">
+    </div>
+  </div>
+
+  <!-- Top tagline -->
+  <div class="tagline">"Jesus is the Way, the Truth and the Life."</div>
+
+  <!-- Text -->
+  <div class="text-block">
+    <div class="church-name">First Baptist Church</div>
+    <div class="subtitle">Jesus Christ — the only Savior</div>
+    <div class="divider"></div>
+    <div class="location">Lomboy Tugas, Tanjay City · Negros Oriental, Philippines</div>
+    <div class="verse">John 14:6</div>
+  </div>
+
+  <div class="vignette"></div>
+</div>
+
+<script>
+  // Generate twinkling stars
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 3 + 1;
+    s.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      --d:${(Math.random()*4+2).toFixed(1)}s;
+      --delay:${(Math.random()*5).toFixed(1)}s;
+      --op:${(Math.random()*0.6+0.2).toFixed(2)};
+    `;
+    starsEl.appendChild(s);
+  }
+
+  // Generate light rays
+  const raysEl = document.getElementById('rays');
+  for (let i = 0; i < 12; i++) {
+    const r = document.createElement('div');
+    r.className = 'ray';
+    r.style.cssText = `
+      --start:${i * 30}deg;
+      animation-delay:${(i * 0.25).toFixed(2)}s, ${(i * 0.5).toFixed(2)}s;
+      transform-origin: 0 0;
+      transform: rotate(${i*30}deg) translateX(-50%);
+      height: ${300 + Math.random()*120}px;
+    `;
+    raysEl.appendChild(r);
+  }
+
+  // Loop animation
+  setTimeout(() => location.reload(), 8200);
+</script>
+</body>
+</html>
